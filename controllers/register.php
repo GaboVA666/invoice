@@ -12,6 +12,7 @@ if (isset($_POST['registrar'])) {
     
     if (mysqli_query($db, $sql)) {
       echo "Usuario registrado";
+      
       header('Location: ../index.php');
     } else {
       echo "<script alert('Algo anda mal')></script>";
