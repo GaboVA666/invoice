@@ -7,11 +7,7 @@ session_start();
 //Si lo está, definimos el botón de cerrar sesión y la duración de la sesión
 if(!isset($_SESSION['mail'])) {
 	header('Location: index.php');
-} else {
-	$estado = $_SESSION['mail'];
-	$salir = '<a href="controllers/logout.php" target="_self">Cerrar sesión</a>';
-	require('controllers/sesiones.php');
-};
+}
 ?>
 
 
