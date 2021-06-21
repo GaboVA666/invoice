@@ -20,6 +20,7 @@ if(!isset($_SESSION['mail'])) {
     <meta charset="UTF-8">
     <title>Welcome</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body{ font: 14px sans-serif; text-align: center; }
     </style>
