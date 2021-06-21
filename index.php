@@ -34,8 +34,8 @@ require('controllers/sesiones.php');
       <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
       <div id="navbarSupportedContent" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="#" class="nav-link">Creditos</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Otras cosas</a></li>
+          <li class="nav-item"><a href="https://exesolutions.000webhostapp.com/" class="nav-link">Creditos</a></li>
+          <li class="nav-item"><a href="https://exesolutions.000webhostapp.com/" class="nav-link">Otras cosas</a></li>
           <li class="nav-item"><a href="registrar.php" class="nav-link">Registrarse</a></li>
         </ul>
         <div class="navbar-text ml-lg-3">   <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" href="#" class="btn btn-primary text-white shadow">Acceder</a></div>
@@ -48,7 +48,7 @@ require('controllers/sesiones.php');
           <div class="col-lg-6 order-2 order-lg-1">
             <h1>Bienvenido a Invoice.exe</h1>
             <p class="lead">Un producto creado por Gabo.exe de Develobeer.exe </p>
-            <p><a href="#" class="btn btn-primary shadow mr-2">Descubre más</a><a href="#" class="btn btn-outline-primary">¿De que trata?</a></p>
+            
           </div>
           <div class="col-lg-6 order-1 order-lg-2"><img src="helmet.jpeg" alt="..." class="img-fluid"></div>
         </div>
