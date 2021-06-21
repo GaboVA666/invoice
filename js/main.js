@@ -1,6 +1,6 @@
 var $cell = $('.card');
 
-//open and close card when clicked on card
+//Abrir cuando hay una carta
 $cell.find('.js-expander').click(function() {
 
   var $thisCell = $(this).closest('.card');
@@ -10,7 +10,7 @@ $cell.find('.js-expander').click(function() {
     $thisCell.removeClass('is-collapsed').addClass('is-expanded');
     
     if ($cell.not($thisCell).hasClass('is-inactive')) {
-      //do nothing
+      //hacer nada
     } else {
       $cell.not($thisCell).addClass('is-inactive');
     }
@@ -21,7 +21,7 @@ $cell.find('.js-expander').click(function() {
   }
 });
 
-//close card when click on cross
+//Cerrar cartas
 $cell.find('.js-collapser').click(function() {
 
   var $thisCell = $(this).closest('.card');

@@ -1,15 +1,15 @@
-// init the jsPDF library
+// Iniciamos libreria jsPDF
 const pdf = new jsPDF();
 
-// select the button
+// Triggereamos el boton
 let button = document.querySelector('button');
-// select the input
+// Seleccionamos los inputs
 let input = document.querySelector('input');
 
-// add 'click' event listener for the button
+// añadimos evento
 button.addEventListener('click', printPDF)
 
-// actual PDF options
+// Opcioines de pdf
 function printPDF() {
     var doc = new jsPDF();
     var elementHTML = $('#content').html();
@@ -29,8 +29,6 @@ function printPDF() {
 
 }
 
-/* Shivving (IE8 is not supported, but at least it won't look as awful)
-/* ========================================================================== */
 
 (function (document) {
     var
@@ -54,8 +52,7 @@ function printPDF() {
     return head.insertBefore(element.lastChild, head.firstChild);
 })(document);
 
-/* Prototyping
-/* ========================================================================== */
+
 
 (function (window, ElementPrototype, ArrayPrototype, polyfill) {
     function NodeList() { [polyfill] }
@@ -93,8 +90,7 @@ function printPDF() {
     };
 })(this, Element.prototype, Array.prototype);
 
-/* Helper Functions
-/* ========================================================================== */
+
 
 function generateTableRow() {
     var emptyColumn = document.createElement('tr');
@@ -116,7 +112,7 @@ function parsePrice(number) {
     return number.toFixed(2).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1,');
 }
 
-/* Update Number
+/* Actualizar numeors
 /* ========================================================================== */
 
 function updateNumber(e) {
@@ -137,55 +133,55 @@ function updateNumber(e) {
     updateInvoice();
 }
 
-/* Update Invoice
+/* Actualizar INVOICE
 /* ========================================================================== */
 
 function updateInvoice() {
     var total = 0;
     var cells, price, total, a, i;
 
-    // update inventory cells
+    // Actualizar celdas de inventario
     // ======================
 
     for (var a = document.querySelectorAll('table.inventory tbody tr'), i = 0; a[i]; ++i) {
-        // get inventory row cells
+        // Obtener celdas de inventario
         cells = a[i].querySelectorAll('span:last-child');
 
-        // set price as cell[2] * cell[3]
+        // Asignar valores
         price = parseFloatHTML(cells[2]) * parseFloatHTML(cells[3]);
 
-        // add price to total
+        // asignar valor a total
         total += price;
 
-        // set row total
+        // asignar campo a total
         cells[4].innerHTML = price;
     }
 
-    // update balance cells
+    // actualizar celdas
     // ====================
 
-    // get balance cells
+    // obtener celda de balance
     cells = document.querySelectorAll('table.balance td:last-child span:last-child');
 
-    // set total
+    // asignar total
     cells[0].innerHTML = total;
 
-    // set balance and meta balance
+    // AZsignar meta de balance
     cells[2].innerHTML = document.querySelector('table.meta tr:last-child td:last-child span:last-child').innerHTML = parsePrice(total - parseFloatHTML(cells[1]));
 
-    // update prefix formatting
+    // Actualizar el prefijo
     // ========================
 
     var prefix = document.querySelector('#prefix').innerHTML;
     for (a = document.querySelectorAll('[data-prefix]'), i = 0; a[i]; ++i) a[i].innerHTML = prefix;
 
-    // update price formatting
+    // Actualizar formato del precio
     // =======================
 
     for (a = document.querySelectorAll('span[data-prefix] + span'), i = 0; a[i]; ++i) if (document.activeElement != a[i]) a[i].innerHTML = parsePrice(parseFloatHTML(a[i]));
 }
 
-/* On Content Load
+/* al cargar contenido
 /* ========================================================================== */
 
 function onContentLoad() {

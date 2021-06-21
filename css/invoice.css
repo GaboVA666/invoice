@@ -23,7 +23,7 @@ text-decoration: none;
 vertical-align: top;
 }
 
-/* content editable */
+
 
 *[contenteditable] { border-radius: 0.25em; min-width: 1em; outline: 0; }
 
