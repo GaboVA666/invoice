@@ -50,7 +50,7 @@ require('controllers/sesiones.php');
             <p class="lead">Un producto creado por Gabo.exe de Develobeer.exe </p>
             <p><a href="#" class="btn btn-primary shadow mr-2">Descubre más</a><a href="#" class="btn btn-outline-primary">¿De que trata?</a></p>
           </div>
-          <div class="col-lg-6 order-1 order-lg-2"><img src="https://3.bp.blogspot.com/-_7vaKiNZPXk/XCWoF-0xj7I/AAAAAAAAAMk/Bx7Ne5WLEvINHPDoG1jwY6rGO2d62pprwCKgBGAs/s1600/ux-design.jpeg" alt="..." class="img-fluid"></div>
+          <div class="col-lg-6 order-1 order-lg-2"><img src="helmet.jpeg" alt="..." class="img-fluid"></div>
         </div>
       </div>
     </section>
